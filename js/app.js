@@ -1,4 +1,20 @@
 $(document).ready(function() {
+   $(document).keydown(function(e) {
+        if (e.which === 88) {
+          $('.ryu-cool').show();
+          $('.ryu-ready').hide();
+          $('.ryu-throwing').hide();
+          $('.ryu-still').hide();
+       }
+    });
+    $(document).keyup(function(e) {
+        if (e.which === 88) {
+          $('.ryu-cool').hide();
+          $('.ryu-ready').hide();
+          $('.ryu-throwing').hide();
+          $('.ryu-still').show();
+       }
+    });
   $('.ryu').mouseenter(function() {
     $('.ryu-still').hide();
     $('.ryu-ready').show();
